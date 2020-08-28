@@ -5,6 +5,11 @@
 # @Site :
 # @Describe:
 
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
+
 from flask import Flask, render_template
 from ironman.data import SourceData
 
@@ -31,10 +36,12 @@ def bar():
     xAxis = data.pop('legend')
     return render_template('bar.html', title='每日访问情况', data=data, legend=list(data.keys()), xAxis=xAxis)
 
+
 @app.route('/pie')
 def pie():
     data = source.pie
     return render_template('pie.html', title='客户端设备占比', data=data, legend=[i.get('name') for i in data])
+
 
 @app.route('/china')
 def china():
