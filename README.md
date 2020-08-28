@@ -25,16 +25,16 @@
 ## 效果图
 
 ### 24 小时访问趋势
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e1.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e1.jpg)
 
 ### 每日访问情况
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e2.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e2.jpg)
 
 ### 客户端设备占比
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e3.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e3.jpg)
 
 ### 用户分布
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e4.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e4.jpg)
 
 ### 爬虫词云
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e5.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e5.jpg)

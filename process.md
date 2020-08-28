@@ -7,7 +7,7 @@
 less /etc/nginx/nginx.conf
 ```
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/1.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/1.jpg)
 
 ```shell
 # 查看日志
@@ -15,7 +15,7 @@ cd /var/log/nginx;
 ll
 ```
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/2.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/2.jpg)
 
 ```shell
 # 合并打包日志
@@ -56,7 +56,7 @@ WITH SERDEPROPERTIES (
 load data local inpath '/home/getway/tmp/way/nginx.log' into table spider.nginx_log;
 ```
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/3.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/3.jpg)
 
 
 # 3.数据清洗与分析
@@ -87,14 +87,14 @@ select transform(remote_addr,
 from spider.nginx_log;
 ```
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/4.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/4.jpg)
 
 ```sql
 -- 查看数据示例
 select * from spider.nginx_log_clean limit 10;
 ```
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/5.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/5.jpg)
 
 ```sql
 set hive.exec.mode.local.auto=true;
@@ -142,9 +142,9 @@ where device = 'Spider'
 group by browser;
 ```
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/6.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/6.jpg)
 
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/7.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/7.jpg)
 
 ```sql
 -- 通过 udf 获取 ip 所在省份，分析省份访问数
@@ -178,19 +178,19 @@ group by province;
 最终的效果图
 
 ### 24 小时访问趋势
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e1.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e1.jpg)
 
 ### 每日访问情况
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e2.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e2.jpg)
 
 ### 客户端设备占比
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e3.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e3.jpg)
 
 ### 用户分布
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e4.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e4.jpg)
 
 ### 爬虫词云
-![image](https://github.com/TurboWay/bigdata_practice/blob/master/example/e5.jpg)
+![image](https://github.com/TurboWay/imgstore/blob/master/bigdata_practice/e5.jpg)
 
 
 
