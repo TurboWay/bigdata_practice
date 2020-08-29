@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/flask-1.1%2B-orange)
 ![](https://img.shields.io/badge/echarts-4.7-yellowgreen)
 
-大数据实践项目 - nginx 日志分析
+大数据实践项目 - nginx 日志分析可视化
 
 ## 功能说明
 
