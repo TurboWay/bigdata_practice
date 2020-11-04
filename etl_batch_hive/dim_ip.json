@@ -1,0 +1,59 @@
+{
+    "job": {
+        "setting": {
+            "speed": {
+                "channel": 1
+            }
+        },
+        "content": [
+             {
+                "reader": {
+                    "name": "hdfsreader",
+                    "parameter": {
+                        "path": "/user/hive/warehouse/spider.db/dim_ip/*",
+                        "defaultFS": "hdfs://nameservices1",
+                        "hadoopConfig":{
+                              "dfs.nameservices": "nameservices1",
+                              "dfs.ha.namenodes.nameservices1": "nn1,nn2",
+                              "dfs.namenode.rpc-address.nameservices1.nn1": "172.16.122.21:8020",
+                              "dfs.namenode.rpc-address.nameservices1.nn2": "172.16.122.24:8020",
+                              "dfs.client.failover.proxy.provider.nameservices1": "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"
+                        },
+                        "column": [
+                               {
+                                "index": 0,
+                                "type": "string"
+                               },
+                               {
+                                "index": 1,
+                                "type": "string"
+                               }
+                        ],
+                        "fileType": "text",
+                        "encoding": "UTF-8",
+                        "fieldDelimiter": "\u0001"
+                    }
+                },
+                "writer": {
+                    "name": "mysqlwriter",
+                    "parameter": {
+                        "username": "root",
+                        "password": "root",
+                        "column": ["ip", "province"],
+                        "preSql": [
+                            "truncate table dim_ip;"
+                        ],
+                        "connection": [
+                            {
+                                "jdbcUrl": "jdbc:mysql://172.16.122.25:3306/test?useUnicode=true&characterEncoding=utf-8",
+                                "table": [
+                                    "dim_ip"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

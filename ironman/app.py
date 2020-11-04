@@ -12,6 +12,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
 
 from flask import Flask, render_template
 from ironman.data import SourceData
+from ironman.data_db import SourceData
 
 app = Flask(__name__)
 
