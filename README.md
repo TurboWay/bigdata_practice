@@ -8,7 +8,7 @@
 
 ## 功能说明
 
-通过 hive 分析 nginx 日志，将分析结果通过 flask + echarts 进行可视化展示
+通过流、批两种方式，分析 nginx 日志，将分析结果通过 flask + echarts 进行可视化展示
 
 ## 数据收集分析过程
 
